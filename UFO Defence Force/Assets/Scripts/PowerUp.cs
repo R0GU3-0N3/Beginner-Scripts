@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    public int powerupnumber;
-    
-    public void Start()
-    {
-        powerupnumber = 0;
-    }
-
+    public PowerUpEffect powerupEffect;
     void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("Player"))
         {
             Debug.Log("Power Up Collected!");
-            Destroy(gameObject); 
-            powerupnumber += 1;
+            Destroy(gameObject);
+            powerupEffect.Apply(other.gameObject);
         }
 
     }
