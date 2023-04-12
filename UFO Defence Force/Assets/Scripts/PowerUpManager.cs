@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class PowerUpManager : MonoBehaviour
 {
-    public GameObject[] ufoPrefabs;
+    public GameObject[] powerupPrefabs;
     
     private float spawnRangeX = 20f;
 
@@ -13,11 +13,11 @@ public class SpawnManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.S))
+        if(Input.GetKeyDown(KeyCode.F))
         {
             Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
-            int ufoIndex = Random.Range(0,ufoPrefabs.Length);
-            Instantiate(ufoPrefabs[ufoIndex],spawnPos, ufoPrefabs[ufoIndex].transform.rotation);
+            int powerupIndex = Random.Range(0, powerupPrefabs.Length);
+            Instantiate(powerupPrefabs[powerupIndex],spawnPos, powerupPrefabs[powerupIndex].transform.rotation);
         }
     }
 }

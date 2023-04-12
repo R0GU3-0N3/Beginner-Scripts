@@ -156,7 +156,6 @@ MonoBehaviour:
   - {fileID: 2591155194705262896, guid: 17c788b405dcf69409618990ed238182, type: 3}
   - {fileID: 7985145262796657300, guid: 87c4cb0536048524ca34e6cbda875bda, type: 3}
   - {fileID: 3262630187207002075, guid: ecd499a01d52180489afc06eb758a8a1, type: 3}
-  ufoIndex: 1
 --- !u!4 &431525832
 Transform:
   m_ObjectHideFlags: 0
@@ -416,8 +415,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -448,6 +447,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1382700708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1382700710}
+  - component: {fileID: 1382700709}
+  m_Layer: 0
+  m_Name: Powerup Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1382700709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382700708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b650a926fb8b4ef40956504c733f6b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerupPrefabs:
+  - {fileID: 1445083766014517144, guid: d181e808e52450e41a94cc658ccc2f79, type: 3}
+--- !u!4 &1382700710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382700708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1633462, y: 19.107304, z: -0.62431884}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1621899541
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   speed: 15
-  xRange: 35
+  xRange: 20
   blaster: {fileID: 1670578651}
   lazerBolt: {fileID: 2925611601951040872, guid: d78b57d4b696c654292ff1f581784788, type: 3}
 --- !u!54 &1621899547
