@@ -10,14 +10,24 @@ public class SpawnManager : MonoBehaviour
 
     private float spawnPosZ = 20f;
 
+    private float startDelay = 2f;
+
+    private float spawnInterval = 1.5f;
+
+    void Start()
+    {
+        InvokeRepeating("SpawnUfo", startDelay, spawnInterval);
+    }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
-            int ufoIndex = Random.Range(0,ufoPrefabs.Length);
-            Instantiate(ufoPrefabs[ufoIndex],spawnPos, ufoPrefabs[ufoIndex].transform.rotation);
-        }
+
+    }
+
+    void SpawnUfo()
+    {
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        int ufoIndex = Random.Range(0,ufoPrefabs.Length);
+        Instantiate(ufoPrefabs[ufoIndex],spawnPos, ufoPrefabs[ufoIndex].transform.rotation);
     }
 }

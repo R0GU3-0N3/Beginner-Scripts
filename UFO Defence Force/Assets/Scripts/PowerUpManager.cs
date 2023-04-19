@@ -10,14 +10,23 @@ public class PowerUpManager : MonoBehaviour
 
     private float spawnPosZ = 20f;
 
+    private float startDelay = 5f;
+
+    private float spawnInterval = 5f;
+    void Start()
+    {
+        InvokeRepeating("SpawnPowerup", startDelay, spawnInterval);
+    }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
-            int powerupIndex = Random.Range(0, powerupPrefabs.Length);
-            Instantiate(powerupPrefabs[powerupIndex],spawnPos, powerupPrefabs[powerupIndex].transform.rotation);
-        }
+
+    }
+    
+    void SpawnPowerup()
+    {
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        int powerupIndex = Random.Range(0,powerupPrefabs.Length);
+        Instantiate(powerupPrefabs[powerupIndex],spawnPos, powerupPrefabs[powerupIndex].transform.rotation);
     }
 }

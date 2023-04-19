@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 7985145262796657301}
   - component: {fileID: 9152840060761771033}
   - component: {fileID: -198032125418419504}
+  - component: {fileID: -7277058333551568352}
+  - component: {fileID: -1102447859366817533}
   m_Layer: 0
   m_Name: UFO_Fighter
   m_TagString: Untagged
@@ -111,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39666e435d5c827439bd7180322a1747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 17
+  speed: 9
 --- !u!114 &-198032125418419504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,3 +128,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: 30
   bottomBounds: -10
+--- !u!54 &-7277058333551568352
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7985145262796657300}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-1102447859366817533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7985145262796657300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11c90e67d737184bb5e50a2b38614ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
