@@ -14,7 +14,12 @@ public class PlayerController : MonoBehaviour
     public Transform blaster;
     public GameObject lazerBolt;
 
+    public GameManager gameManager; 
 
+    void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -33,7 +38,7 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         {
             Instantiate(lazerBolt, blaster.transform.position, lazerBolt.transform.rotation);
         }

@@ -141,6 +141,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser Bolt
       objectReference: {fileID: 0}
+    - target: {fileID: 8720768575187268275, guid: 000510a822ffae74da7a51760cba8559, type: 3}
+      propertyPath: m_Height
+      value: 2.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720768575187268275, guid: 000510a822ffae74da7a51760cba8559, type: 3}
+      propertyPath: m_Radius
+      value: 1.07
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 000510a822ffae74da7a51760cba8559, type: 3}
 --- !u!4 &2260626232636560931 stripped
