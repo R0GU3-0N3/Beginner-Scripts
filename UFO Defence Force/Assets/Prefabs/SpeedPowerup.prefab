@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1445083766014517149}
   - component: {fileID: 1445083766014517146}
   - component: {fileID: 1445083766014517147}
-  - component: {fileID: 1445083766014517153}
+  - component: {fileID: -8533289894134899586}
   m_Layer: 0
   m_Name: SpeedPowerup
   m_TagString: Untagged
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!114 &1445083766014517153
+--- !u!114 &-8533289894134899586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1445083766014517144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5e29311ca29c234fa21375442a3d682, type: 3}
+  m_Script: {fileID: 11500000, guid: baa820a96a0728f48904040cba046d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   topBounds: 30

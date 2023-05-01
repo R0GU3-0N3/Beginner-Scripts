@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
 
     public float xRange;
+    public AudioSource Lazer;
+    public AudioSource Pop;
 
     public Transform blaster;
     public GameObject lazerBolt;
@@ -41,11 +43,13 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         {
             Instantiate(lazerBolt, blaster.transform.position, lazerBolt.transform.rotation);
+            Lazer.Play();
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
+        Pop.Play();
     }
 }

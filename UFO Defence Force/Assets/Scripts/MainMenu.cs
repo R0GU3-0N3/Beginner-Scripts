@@ -8,14 +8,18 @@ public class MainMenu : MonoBehaviour
 {
     public int sceneToLoad;
 
+    public AudioSource select;
+
     public void StartGame()
     {
+        select.Play();
         SceneManager.LoadScene(sceneToLoad);
         Debug.Log("New Scene Loaded!");
     }
 
     public void QuitGame()
     {
+        select.Play();
         Application.Quit();
         Debug.Log("Quit Game!");
     }
